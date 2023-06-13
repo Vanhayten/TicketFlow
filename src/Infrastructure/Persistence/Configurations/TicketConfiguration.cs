@@ -12,7 +12,7 @@ public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
             .HasMaxLength(200)
             .IsRequired();
 
-        builder.HasOne(t => t.Category)
-            .WithMany(t => t.Tickets);
+        //builder.HasOne(t => t.Category)
+        //    .WithMany(t => t.Tickets);
     }
 }

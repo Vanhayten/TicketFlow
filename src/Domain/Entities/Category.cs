@@ -8,5 +8,5 @@ namespace TicketFlow.Domain.Entities;
 public class Category : BaseAuditableEntity
 {
     public string? title { get; set; }
-    public ICollection<Ticket>? Tickets { get; set; }
+    public IList<Ticket> Tickets { get; private set; } = new List<Ticket>();
 }
