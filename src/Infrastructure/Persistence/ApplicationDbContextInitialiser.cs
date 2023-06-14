@@ -91,5 +91,22 @@ public class ApplicationDbContextInitialiser
             await _context.SaveChangesAsync();
         }
 
+        // Default data
+        // Seed, if necessary
+        if (!_context.Categories.Any())
+        {
+            _context.Categories.Add(new Category
+            {
+                Title = ".net Developer",
+                Tickets =
+                {
+                    new Ticket { Title = "Make 3" , Description = "add a new feature 2for a last User cancellation1"},
+                    new Ticket { Title = "Make 1" , Description = "add a new feature 4for a last User cancellation1"},
+                    new Ticket { Title = "Make 2" , Description = "add a new feature 3for a last User cancellation1"},
+                }
+            });
+
+            await _context.SaveChangesAsync();
+        }
     }
 }

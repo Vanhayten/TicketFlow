@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace TicketFlow.Domain.Entities;
 public class Category : BaseAuditableEntity
 {
-    public string? title { get; set; }
+    public string? Title { get; set; }
     public IList<Ticket> Tickets { get; private set; } = new List<Ticket>();
 }
